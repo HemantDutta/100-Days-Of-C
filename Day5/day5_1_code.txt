@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, j, count = 0, num, n = 5;
+
+    for(i=1; i<=n; i++)
+    {
+        num = (i%2!=0) ? (count + 1) : (count + i);
+
+        for(j=1; j<=i; j++)
+        {
+            printf("%d", num);
+			
+			if(j!=i)
+			{
+				printf("*");	
+			}	
+				
+            if(i%2!=0)
+                num++;
+            else
+                num--;
+
+            count++;
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
